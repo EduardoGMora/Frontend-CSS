@@ -1,0 +1,277 @@
+:root{
+    --colorlogo: #2C2677;
+    --colorheadings: #2C2677;
+    --coloroscuro: #302D5E;
+    --colorparrafo: #3737a7;
+    --colorlink: #95989B;
+    --blanco: #ffff;
+    --boton: #5759FE;
+    --negro: #000;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior:smooth;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+body{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2rem;
+}
+/*selectores globales*/
+h1, h2{
+    color: var(--colorheadings);
+    font-weight: 700;
+}
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    color: var(--coloroscuro);
+    font-weight: 700;
+    font-size: 3.2;
+}
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+p{
+    font-size: 2rem;
+    color: var(--colorparrafo);
+}
+ul{
+    list-style: none;
+}
+
+/* Utilidades */
+.no-margen{
+    margin: 0;
+}
+.no-padding{
+    padding: 0;
+}
+.centrar{
+    text-align: center;
+}
+.contenedor{
+    width: min(90%, 150rem);
+    margin: 0 auto;
+}
+
+/*header*/
+.encabezado{
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    padding: 2rem;
+    z-index: 100;
+    transition: 0.6s;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(1rem);
+    margin-bottom: 2rem;
+}
+@media (min-width: 1024px) {
+    .encabezado{
+        position: fixed;
+    }
+}
+@media (min-width: 1024px) {
+    .barra{
+        display: flex;    
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.navegacion__link{              /*Navegacion*/
+    display: block;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--negro);
+    margin-bottom: 1rem;
+}
+@media (min-width: 1024px) {
+    .navegacion{
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+.boton{                         /*boton*/
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--boton);
+    color: var(--blanco);
+    text-shadow: 5px 5px 10px var(--negro);
+    align-items: center;
+    justify-content: center;
+    border: none;
+    transition: .3s ease-out;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+.boton:hover{
+    cursor: pointer;
+    color: var(--boton);
+    text-shadow: none;
+    background-color: var(--blanco);
+    border: 2px solid var(--boton);
+}
+
+/*Main*/
+@media (min-width: 768px) {                     /* intro */
+    .seccion1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+.garantia{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+}
+.garantia__info{
+    text-align: center;
+    align-items: center;
+}
+.img-bg{
+    background-image: url(../images/vacunas.png);
+    height: 20rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+@media (min-width: 768px) {                         /*Ventajas de vacunarte*/
+    .ventajas{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+        align-items: center;
+    }
+}
+@media (min-width: 1024px) {
+    .ventajas{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (min-width: 1440px) {
+    .seccion2{
+        display: flex;
+    }
+}
+.ventajas__info{
+    padding: 2rem;
+    height: 30rem;
+    margin-bottom: 2rem;
+    align-items: center;
+    background-color: var(--blanco);
+    transition: .3s ease all;
+    border-radius: 10px;
+}
+@media (min-width: 768px) {
+    .ventajas__info{
+        height: 35rem;
+    }
+}
+@media (min-width: 1024px) {
+    .ventajas__info{
+        height: 40rem;
+    }
+}
+.ventajas__info:hover{
+    -webkit-box-shadow: -1px -4px 79px 1px rgba(0,0,0,0.32);
+    -moz-box-shadow: -1px -4px 79px 1px rgba(0,0,0,0.32);
+    box-shadow: -1px -4px 79px 1px rgba(0,0,0,0.32);
+}
+@media (min-width: 1024px) {                        /*Pasos seccion 3*/
+    .seccion3{
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 4rem;
+        align-items: center;
+    }
+}
+@media (min-width: 1024px) {
+    .preparacion__info{
+        flex: 0 0 50%;
+    }
+}
+.seccion3{
+    margin-bottom: 4rem;
+}
+.lista{
+    color: var(--coloroscuro);
+    font-weight: 700;
+}
+.lista__paso{
+    margin-bottom: 2rem;
+}
+.lista__paso:hover{
+    margin-left: -2rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.seccion4{
+    margin-bottom: 4rem;
+}
+@media (min-width: 1024px) {                /*contacto*/
+    .seccion4{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+    }
+}
+.contacto{
+    flex: 0 0 50%;
+}
+@media (min-width: 1024px) {
+    .contacto__datos{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 2rem;
+    }
+}
+
+.informacion{                               /*info de la empresa*/
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 3rem;
+}
+@media (min-width: 768px) {                
+    .informacion{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+.footer{                                    /*footer*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-shadow: 5px 5px 10px var(--negro);
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+@media (min-width: 1024px) {
+    .footer{
+        flex-direction: row;
+    }
+}
+.footer__link{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
