@@ -1,3 +1,3 @@
 # Frontend-CSS
 
-Vacunas en css algo bien
+Esta fué mi primera práctica de CSS, pero no me gustaba mucho, entonces la quise mejorar y hacerla responsive 
